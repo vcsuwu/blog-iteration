@@ -3,8 +3,6 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-console.log(path.resolve(__dirname, "../", "public"))
-app.use('/public', express.static(path.resolve(__dirname, "css")))
 app.use('/public', express.static(path.resolve(__dirname, "../", "public")))
 
 app.get('/', (req, res) => {
